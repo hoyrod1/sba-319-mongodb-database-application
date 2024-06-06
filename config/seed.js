@@ -2,78 +2,82 @@
 const mongoose = require("./db-connection.js");
 //==========================================================================================//
 // Require Models for delete and create operations;
-const Trainer = require("../models/Post.js");
-const TrainingPackage = require("../models/User.js");
-const Member = require("../models/User.js");
+const Trainer = require("../model/Trainer.js");
+const TrainingPackage = require("../model/TrainingPackage.js");
+const Member = require("../model/Member.js");
 //==========================================================================================//
 
 const trainers = [
   {
-    email: "john@doe.com",
-    password: "123456",
-    age: 40,
-    isCool: true,
+    name: "Kaden",
+    username: "BooBoo",
+    email: "booboo@example.com",
   },
   {
-    email: "boba@fett.com",
-    password: "jetpackdude",
-    age: 35,
-    isCool: true,
+    name: "Kamori",
+    username: "KingKam",
+    email: "king_kam@example.com",
   },
   {
-    email: "darth@vader.com",
-    password: "iamyourfather",
-    age: 60,
-    isCool: false,
+    name: "Justin",
+    username: "JustInTime",
+    email: "justin@example.com",
+  },
+  {
+    name: "Rodney",
+    username: "Hot Rod",
+    email: "hoyrod1@aol.com",
   },
 ];
 
 const trainingPackages = [
   {
-    email: "john@doe.com",
-    password: "123456",
-    age: 40,
-    isCool: true,
+    type: "resistance-training",
+    pricePerHour: "$100",
+    description:
+      "The use of Free weights, resistance bands and the use of body wight",
   },
   {
-    email: "boba@fett.com",
-    password: "jetpackdude",
-    age: 35,
-    isCool: true,
+    type: "cardio-training",
+    pricePerHour: "$100",
+    description:
+      "The use of stationary machines, the use of out-door activity and swimming",
   },
   {
-    email: "darth@vader.com",
-    password: "iamyourfather",
-    age: 60,
-    isCool: false,
+    type: "flexability-training",
+    pricePerHour: "$100",
+    description:
+      "The use of static, dynamic stretching, ballistic stretching, active stretching, PNF stretching",
+  },
+  {
+    type: "combination-training",
+    pricePerHour: "$200",
+    description:
+      "This training regiment includes resistance training, cardio training and stretching",
   },
 ];
 
 const members = [
   {
-    title: "Star Wars",
-    content: "its really cool",
-    author: "Josh",
+    name: "Curtis Jackson",
+    username: "BooBoo",
+    email: "booboo@example.com",
   },
   {
-    title: "MongoDB",
-    content: "its a database",
-    author: "Per Scholas",
+    name: "Camron Dipset",
+    username: "KingKam",
+    email: "king_kam@example.com",
   },
   {
-    title: "Dogs are Cool",
-    content: "Do i really need to explain??",
-    author: "Doglover123",
-    comments: [
-      {
-        content: "you so right",
-        author: "dogsdogsdogs",
-      },
-      {
-        content: "true true",
-        author: "albert",
-      },
-    ],
+    name: "Carmelo Anthony",
+    username: "JustInTime",
+    email: "justin@example.com",
+  },
+  {
+    id: 4,
+    name: "Ronnie Coleman",
+    username: "Mr-Olympia",
+    email: "MrOlympia@aol.com",
   },
 ];
 

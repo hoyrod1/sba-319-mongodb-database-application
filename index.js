@@ -4,6 +4,13 @@ const express = require("express");
 const req = require("express/lib/request");
 const res = require("express/lib/response");
 //====================================================================//
+
+//====================================================================//
+//------------ UNCOMMENT BELOW TO TEST DATABASE CONNECTION -----------//
+// const mongoose = require("./config/db-connect");
+//====================================================================//
+
+//====================================================================//
 const app = express();
 //====================================================================//
 const PORT = process.env.PORT || 8000;
