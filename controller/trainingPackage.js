@@ -10,6 +10,7 @@ module.exports = {
 //======================================================================//
 
 //======================================================================//
+// Create Training Package
 async function createTrainingPackage(req, res) {
   try {
     const createTrainingPackage = await TrainingPackage.create(req.body);
@@ -22,7 +23,7 @@ async function createTrainingPackage(req, res) {
 //======================================================================//
 
 //======================================================================//
-// Get all members
+// Get all Training Packages
 async function getTrainingPackages(req, res) {
   try {
     const trainingPackages = await TrainingPackage.find({});
@@ -37,7 +38,7 @@ async function getTrainingPackages(req, res) {
 //======================================================================//
 
 //======================================================================//
-// Get a single member
+// Get a single Training Package
 async function getTrainingPackage(req, res) {
   try {
     const singleTrainingPackage = await TrainingPackage.findById(req.params.id);
@@ -50,7 +51,7 @@ async function getTrainingPackage(req, res) {
 //======================================================================//
 
 //======================================================================//
-// Update a single member
+// Update a single Training Package
 async function updateTrainingPackage(req, res) {
   try {
     const updatedTrainingPackage = await TrainingPackage.findByIdAndUpdate(
@@ -69,7 +70,7 @@ async function updateTrainingPackage(req, res) {
 //======================================================================//
 
 //======================================================================//
-// Delete a single member
+// Delete a single Training Package
 async function deleteTrainingPackage(req, res) {
   try {
     const deleteTrainingPackage = await TrainingPackage.findByIdAndDelete(

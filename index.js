@@ -18,6 +18,7 @@ const PORT = process.env.PORT || 8000;
 //-------------------------- REQUIRED ROUTES -------------------------//
 const membersRoutes = require("./routes/members.js");
 const trainingPackagesRoutes = require("./routes/trainingPackage.js");
+const trainerRoutes = require("./routes/trainer");
 //====================================================================//
 app.use(express.json());
 //====================================================================//
@@ -34,8 +35,9 @@ app.get("/", (request, response) => {
 // Members routes
 app.use("/members", membersRoutes);
 // Training Packages routes
-// app.use("/trainingPackages", trainingPackagesRoutes);
 app.use("/training-packages", trainingPackagesRoutes);
+// Trainer routes
+app.use("/trainers", trainerRoutes);
 //====================================================================//
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
