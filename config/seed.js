@@ -1,7 +1,6 @@
 // Require connection file to connect
 const mongoose = require("./db-connect.js");
 //==========================================================================================//
-// Require Models for delete and create operations;
 const Trainer = require("../model/Trainer.js");
 const TrainingPackage = require("../model/TrainingPackage.js");
 const Member = require("../model/Member.js");

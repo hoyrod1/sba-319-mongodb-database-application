@@ -12,7 +12,6 @@ const trainingPackageSchema = Schema({
   description: {
     type: String,
     required: true,
-    unique: true,
   },
 });
 
