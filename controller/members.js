@@ -3,7 +3,7 @@ const Member = require("../model/Member.js");
 module.exports = {
   createMember,
   getMembers,
-  getSingleMember,
+  getMember,
   updateMember,
   deleteMember,
 };
@@ -36,7 +36,7 @@ async function getMembers(req, res) {
 
 //======================================================================//
 // Get a single member
-async function getSingleMember(req, res) {
+async function getMember(req, res) {
   try {
     const singleMember = await Member.findById(req.params.id);
 

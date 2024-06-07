@@ -7,10 +7,10 @@ router.post("/", memberCtrl.createMember);
 
 router.get("/", memberCtrl.getMembers);
 
-router.get("/:id", memberCtrl.getSingleMember);
+router.get("/:id", memberCtrl.getMember);
 
 router.put("/:id", memberCtrl.updateMember);
 
-// router.delete("/:id", usersCtrl.deleteUser);
+router.delete("/:id", memberCtrl.deleteMember);
 
 module.exports = router;

@@ -15,7 +15,9 @@ const app = express();
 //====================================================================//
 const PORT = process.env.PORT || 8000;
 //====================================================================//
+//-------------------------- REQUIRED ROUTES -------------------------//
 const membersRoutes = require("./routes/members.js");
+const trainingPackagesRoutes = require("./routes/trainingPackage.js");
 //====================================================================//
 app.use(express.json());
 //====================================================================//
@@ -29,8 +31,11 @@ app.get("/", (request, response) => {
   response.send("Welcome To My First Express Application");
 });
 //====================================================================//
-// Members page
+// Members routes
 app.use("/members", membersRoutes);
+// Training Packages routes
+// app.use("/trainingPackages", trainingPackagesRoutes);
+app.use("/training-packages", trainingPackagesRoutes);
 //====================================================================//
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
