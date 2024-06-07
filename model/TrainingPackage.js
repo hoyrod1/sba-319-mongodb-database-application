@@ -16,4 +16,4 @@ const trainerSchema = Schema({
   },
 });
 
-module.exports = model("Trainer", trainerSchema);
+module.exports = model("TrainingPackage", trainerSchema);

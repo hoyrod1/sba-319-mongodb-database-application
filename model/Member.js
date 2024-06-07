@@ -8,6 +8,8 @@ const memberSchema = Schema({
   username: {
     type: String,
     required: true,
+    min: 2,
+    max: 16,
   },
   email: {
     type: String,
@@ -20,4 +22,4 @@ const memberSchema = Schema({
   },
 });
 
-module.exports = model("Trainer", memberSchema);
+module.exports = model("Member", memberSchema);
